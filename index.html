@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emmanuel's Resume</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">        <script src="https://kit.fontawesome.com/9f39419f3a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="resume">
+            <div class="resume_socials">
+                <h1>Emmanuel Robertson</h1>
+                <div class="linkicon">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href = "https://www.linkedin.com/in/emmanuelkor1123/"> Linkedin </a>
+                </div>
+                <div class="emailicon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href ="mailto:Emmanuel.Robertson22@gmail.com"> Email</a>
+                </div>
+                <div class="giticon">
+                    <i class="fa-brands fa-github"></i>
+                    <a href = "https://github.com/Mannyy22"> Github</a>
+                </div>
+                <div class="resicon">
+                    <i class="fa-solid fa-file"></i>
+                    <a href="./RobertsonEmmanuel-Resume.pdf" download="Resume.pdf">Download Resume</a> 
+                 </div>
+            <div>
+            <hr></hr>
+            <div class="gmu">
+                <h2>EDUCATION</h2>
+                <h4>George Mason University <p1> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Fairfax, VA</p1></h4>
+                <p><i>Bachelor of Science, Information Technology &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Jan.2020 – May 2022 </i></p>  
+            </div>
+            <div class="nvcc">
+                <h4>Northern Virginia Community College <p1> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sterling, VA</p1></h4>
+                <p><i>Associate of Science, General Studies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Aug.2017 – Dec.2019</i></p>  
+            </div>
+            <hr></hr>
+            <div class="experience">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+                <h3> Amazon Web Services Cloud Support Engineer <p1> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; June 2022 - present</p1> </h3>
+                    <ul>
+                        <li>Providing technical support to AWS customers and troubleshooting issues related to AWS services and infrastructure</li>
+                        <li>Responding to customer inquiries via email, phone, or chat and resolving their technical issues.</li>
+                        <li>Troubleshoot AWS analytics services such as OpenSearch, Kafka, Kinesis Suites, AppFlow, Kendra, along with main AWS services such as EC2, S3, IAM, Lambda, VPC/Route 53.</li>
+                        <li>Documenting customer issues and solutions in a knowledge base for future reference</li>
+                        <li>Providing guidance and best practices to customers on how to optimize their AWS infrastructure for cost
+                            and performance.</li>
+                    </ul>
+                <h3>Amazon Web Services Data Center Technician &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; October 2021 - February 2022</h3>
+                    <ul>
+                        <li>Deploying and maintaining hardware infrastructure in AWS data centers.</li>
+                        <li>Installing and configuring servers, storage systems, and networking equipment.</li>
+                        <li>Identifying and resolving hardware and network issues promptly to ensure minimal downtime.</li>
+                        <li>Conducting root cause analysis for incidents and implementing preventive measures.</li>
+                    </ul>
+            </div>
+            <h2>TECHNICAL PROJECTS</h2>
+                <h3>The Cloud Resume Challange</h3>
+                    <ul>
+                        <li>Created Cloud based resume hosted on AWS. Using HTML/CSS, JS, Python, DynamoDB, Route53,
+                            Currently work in progress. </li>
+                    </ul>
+            <hr></hr>
+            <div class="skills">    
+                <h2>SKILLS/CERTIFCATION</h2>
+                    <ul>
+                        <li>Languages:Python, PHP, SQL, HTML/CSS</li>
+                        <li>Tools/Services:AWS, Kafka, Elasticsearch/Opensearch, Kinesis, EC2/Linux, Networking/VPC, S3, IAM, Lambda</li>
+                        <li>Certifications:AWS Certified Solutions Architect Associate - SAA C03</li>
+                    </ul>
+            </div>
+                <div id="footer">
+                <h2 id="name">Emmanuel</h2></div>
+            </div>
+        <script>
+            const apiUrl = 'https://7yb3pmcrj1.execute-api.us-east-1.amazonaws.com/api-gateway';
+            
+
+            fetch(apiUrl, {
+                
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({}), // Ensure this matches API requirements
+            })
+            .then(response => {
+                // Check if the response is ok and handle errors
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text(); // Use text() to inspect raw response
+            })
+            .then(text => {
+                console.log('Raw response text:', text);
+                try {
+                    const data = JSON.parse(text); // Attempt to parse JSON
+                    console.log('Visit logged:', data);
+                } catch (e) {
+                    console.error('Error parsing JSON:', e);
+                }
+            })
+            .catch(error => console.error('Error logging visit:', error));
+            </script>
+        </body>
+</html>

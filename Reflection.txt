@@ -1,0 +1,22 @@
+What are the top 2-3 areas of cloud that
+you feel least comfortable with right
+now?
+
+When do you plan to take your
+certification? What's your study plan
+between now and then? - I want to finish the Cloud Resume Challange, then after take my AWS Solutions Architect in about 6 months time, I want to by the end of June 2023
+
+What other areas of DevOps or software
+development do you want to get better
+at outside of cloud certification? - I want a better understanding of how frontend and backend communicate with each other. For backend I want to understand what frameworks are and 
+how they are utlized, for backend I want to see how things just work. For DevOps I want to understand IAC and understand DevOps Principles and the overall methodology. 
+
+What aspect of Chunk 1's work did you
+find the most difficult? I found updating the DNS records to pointing them to cloud front was difficult because I couldn't tell if having www. in domain name was seperate domain when creating
+a distruction on CloudFront and creating a SSL certifcate and i also ran into an error where my dns records were pointing to the wrong end points and I had to figure out why I couldn't
+access my website. Creating the Front wasn't too bad, it took a little while because I was trying to make it look professional and perfect but I'm not a design or have much knowledge of
+frontend out of basic html/css.
+
+What I would have done different in Chunk 1 is use AWS CLI to try and complete this task. and Learn more about the frontend to create a more professtional looking resunme website.
+Maybe that is something I will do in the future.
+
